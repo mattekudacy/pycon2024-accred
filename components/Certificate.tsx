@@ -81,7 +81,7 @@ const Certificate = ({
       textAlign: "left",
       fontSize: 80 * scaleFactor,
       color: textColor,
-      fontFamily: "Ubuntu",
+      // fontFamily: "Ubuntu",
     },
   });
 
