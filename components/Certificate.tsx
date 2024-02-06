@@ -8,8 +8,19 @@ import {
   StyleSheet,
   Text,
   View,
+  Font,
 } from "@react-pdf/renderer";
 import { useEffect, useState } from "react";
+
+// register ubuntu font
+Font.register({
+  family: 'Ubuntu',
+  fonts: [
+    {
+      src: 'http://fonts.gstatic.com/s/ubuntu/v9/bMbHEMwSUmkzcK2x_74QbA.ttf',
+    },
+  ],
+}); 
 
 const Certificate = ({
   certificateTemplate,
@@ -60,15 +71,17 @@ const Certificate = ({
       left: 0,
       right: 0,
       bottom: 0,
-      display: "flex",
-      alignItems: "center",
-      justifyContent: "center",
+      // display: "flex",
+      // alignItems: "center",
+      // justifyContent: "center",
+      marginLeft: 1020,
+      marginTop: 950,
     },
     text: {
-      textAlign: "center",
-      fontSize: 48 * scaleFactor,
-      fontWeight: "bold",
+      textAlign: "left",
+      fontSize: 80 * scaleFactor,
       color: textColor,
+      fontFamily: "Ubuntu",
     },
   });
 
