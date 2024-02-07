@@ -13,8 +13,8 @@ import {
 import { useEffect, useState } from "react";
 
 Font.register({
-  family: "Open Sans",
-  src: "https://fonts.gstatic.com/s/opensans/v29/memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgsjZ0C4n.ttf",
+  family: "Ubuntu",
+  src: "https://fonts.gstatic.com/s/ubuntu/v20/4iCv6KVjbNBYlgoCjC3Ttw.ttf",
 });
 
 const Certificate = ({
@@ -76,7 +76,7 @@ const Certificate = ({
       textAlign: "left",
       fontSize: 80 * scaleFactor,
       color: textColor,
-      fontFamily: "Open Sans",
+      fontFamily: "Ubuntu",
     },
   });
 
