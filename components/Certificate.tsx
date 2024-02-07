@@ -12,15 +12,10 @@ import {
 } from "@react-pdf/renderer";
 import { useEffect, useState } from "react";
 
-// register ubuntu font
 Font.register({
-  family: 'Ubuntu',
-  fonts: [
-    {
-      src: 'http://fonts.gstatic.com/s/ubuntu/v9/bMbHEMwSUmkzcK2x_74QbA.ttf',
-    },
-  ],
-}); 
+  family: "Open Sans",
+  src: "https://fonts.gstatic.com/s/opensans/v29/memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgsjZ0C4n.ttf",
+});
 
 const Certificate = ({
   certificateTemplate,
@@ -81,7 +76,7 @@ const Certificate = ({
       textAlign: "left",
       fontSize: 80 * scaleFactor,
       color: textColor,
-      // fontFamily: "Ubuntu",
+      fontFamily: "Open Sans",
     },
   });
 
