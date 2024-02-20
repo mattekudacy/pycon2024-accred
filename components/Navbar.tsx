@@ -2,7 +2,8 @@
 
 import Link from "next/link";
 
-import accredLogo from "@/assets/accred_logo.svg";
+import pyconLogo from "@/assets/pycon.png";
+import pyconText from "@/assets/pycon_text.svg";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import {
   DropdownMenu,
@@ -26,13 +27,12 @@ export const AdminNavbar = () => {
   const { user, logOut } = useAuth();
   const { theme, setTheme } = useTheme();
   return (
-    <nav className="flex bg-white drop-shadow-xl p-5 justify-between dark:bg-[#080E1D]">
+    <nav className="flex bg-white drop-shadow-xl p-5 justify-between dark:bg-[#0B142E]">
       <div className="flex gap-5">
         <Image
-          src={accredLogo}
-          width={70}
+          src={pyconLogo}
+          width={65}
           alt="Accred Logo"
-          className="dark:invert"
           priority
         />
         <NavigationMenu>
@@ -58,7 +58,7 @@ export const AdminNavbar = () => {
                 </NavigationMenuLink>
               </Link>
             </NavigationMenuItem>
-            <NavigationMenuItem>
+            {/* <NavigationMenuItem>
               <button
                 onClick={() =>
                   theme === "dark" ? setTheme("light") : setTheme("dark")
@@ -68,7 +68,7 @@ export const AdminNavbar = () => {
                   {theme === "dark" ? <Sun /> : <Moon />}
                 </NavigationMenuLink>
               </button>
-            </NavigationMenuItem>
+            </NavigationMenuItem> */}
           </NavigationMenuList>
         </NavigationMenu>
       </div>
@@ -99,24 +99,29 @@ export const GuestNavbar = () => {
   const { user, logOut, checkIfUserIsAdmin } = useAuth();
   const { theme, setTheme } = useTheme();
   return (
-    <nav className="flex bg-white drop-shadow-xl p-5 justify-between dark:bg-[#080E1D]">
+    <nav className="flex bg-white drop-shadow-xl p-5 justify-between dark:bg-[#0B142E]">
       <div className="flex gap-5">
         <Image
-          src={accredLogo}
-          width={70}
+          src={pyconLogo}
+          width={65}
           alt="Accred Logo"
-          className="dark:invert"
+          priority
+        />
+        <Image
+          src={pyconText}
+          width={65}
+          alt="Accred Logo"
           priority
         />
         <NavigationMenu>
           <NavigationMenuList>
-            <NavigationMenuItem>
+            {/* <NavigationMenuItem>
               <Link href="/" legacyBehavior passHref>
                 <NavigationMenuLink className={navigationMenuTriggerStyle()}>
                   Home
                 </NavigationMenuLink>
               </Link>
-            </NavigationMenuItem>
+            </NavigationMenuItem> */}
             {user && checkIfUserIsAdmin(user) ? (
               <NavigationMenuItem>
                 <Link href="/admin/home" legacyBehavior passHref>
@@ -126,13 +131,13 @@ export const GuestNavbar = () => {
                 </Link>
               </NavigationMenuItem>
             ) : null}
-            <NavigationMenuItem>
+            {/* <NavigationMenuItem>
               <Link href="/docs" legacyBehavior passHref>
                 <NavigationMenuLink className={navigationMenuTriggerStyle()}>
                   Help
                 </NavigationMenuLink>
               </Link>
-            </NavigationMenuItem>
+            </NavigationMenuItem> */}
             <NavigationMenuItem>
               <Link href="/contact" legacyBehavior passHref>
                 <NavigationMenuLink className={navigationMenuTriggerStyle()}>
@@ -140,7 +145,7 @@ export const GuestNavbar = () => {
                 </NavigationMenuLink>
               </Link>
             </NavigationMenuItem>
-            <NavigationMenuItem>
+            {/* <NavigationMenuItem>
               <button
                 onClick={() =>
                   theme === "dark" ? setTheme("light") : setTheme("dark")
@@ -150,7 +155,7 @@ export const GuestNavbar = () => {
                   {theme === "dark" ? <Sun /> : <Moon />}
                 </NavigationMenuLink>
               </button>
-            </NavigationMenuItem>
+            </NavigationMenuItem> */}
           </NavigationMenuList>
         </NavigationMenu>
       </div>

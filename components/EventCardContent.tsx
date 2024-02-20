@@ -53,7 +53,7 @@ export const EventCardContent = ({
       const eventYear = date.getFullYear();
       const eventMonth = date.getMonth() + 1;
       const shareURL = generateLinkedInShareURL({
-        orgName: "Google Developer Student Clubs San Carlos",
+        orgName: "Python.PH, Inc.",
         certTitle: eventName,
         certYear: eventYear,
         certMonth: eventMonth,
