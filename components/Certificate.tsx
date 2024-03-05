@@ -69,8 +69,8 @@ const Certificate = ({
       // display: "flex",
       // alignItems: "center",
       // justifyContent: "center",
-      marginLeft: 1020,
-      marginTop: 950,
+      marginLeft: 3050,
+      marginTop: 2850,
     },
     text: {
       textAlign: "left",
